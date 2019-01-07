@@ -1,0 +1,7 @@
+C:\Users\Owner\Desktop\DailyReports\DailyReports\bin\Debug\DailyReports.exe.config
+C:\Users\Owner\Desktop\DailyReports\DailyReports\bin\Debug\DailyReports.exe
+C:\Users\Owner\Desktop\DailyReports\DailyReports\bin\Debug\DailyReports.pdb
+C:\Users\Owner\Desktop\DailyReports\DailyReports\obj\Debug\DailyReports.csprojAssemblyReference.cache
+C:\Users\Owner\Desktop\DailyReports\DailyReports\obj\Debug\DailyReports.csproj.CoreCompileInputs.cache
+C:\Users\Owner\Desktop\DailyReports\DailyReports\obj\Debug\DailyReports.exe
+C:\Users\Owner\Desktop\DailyReports\DailyReports\obj\Debug\DailyReports.pdb
