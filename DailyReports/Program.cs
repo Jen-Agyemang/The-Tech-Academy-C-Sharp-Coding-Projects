@@ -27,6 +27,7 @@ namespace DailyReports
 
             Console.WriteLine("Do you need help with anything? Please answer \"true\" or \"false\" ");
             string needHelp = Console.ReadLine();
+            bool helpneed = Convert.ToBoolean(needHelp);
 
   
             
