@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("ConApp")]
+[assembly: AssemblyTitle("ArraysLoopsList")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ConApp")]
+[assembly: AssemblyProduct("ArraysLoopsList")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("c96740ee-1ede-45d1-bec6-62e399fca940")]
+[assembly: Guid("11a1b7df-ba1b-4a69-a08d-d075c40df2e6")]
 
 // Version information for an assembly consists of the following four values:
 //

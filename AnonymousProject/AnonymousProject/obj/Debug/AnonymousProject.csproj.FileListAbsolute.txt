@@ -1,7 +1,0 @@
-C:\Users\Owner\Desktop\DailyReports\AnonymousProject\AnonymousProject\obj\Debug\AnonymousProject.csprojAssemblyReference.cache
-C:\Users\Owner\Desktop\DailyReports\AnonymousProject\AnonymousProject\obj\Debug\AnonymousProject.csproj.CoreCompileInputs.cache
-C:\Users\Owner\Desktop\DailyReports\AnonymousProject\AnonymousProject\obj\Debug\AnonymousProject.exe
-C:\Users\Owner\Desktop\DailyReports\AnonymousProject\AnonymousProject\bin\Debug\AnonymousProject.exe.config
-C:\Users\Owner\Desktop\DailyReports\AnonymousProject\AnonymousProject\bin\Debug\AnonymousProject.exe
-C:\Users\Owner\Desktop\DailyReports\AnonymousProject\AnonymousProject\bin\Debug\AnonymousProject.pdb
-C:\Users\Owner\Desktop\DailyReports\AnonymousProject\AnonymousProject\obj\Debug\AnonymousProject.pdb
