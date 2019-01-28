@@ -8,17 +8,17 @@ namespace Methods
 {
    public class Math
     {
-        public int Add (int a, int b)
+        public int Add (int a)
         {
-            return  a + b;
+            return  a + 8;
         }
-        public int Multiply (int a, int b)
+        public int Multiply (int b)
         {
-            return a * b;
+            return b * 7;
         }
-        public int Subtract (int a, int b)
+        public int Subtract (int c)
         {
-            return a - b;
+            return c - 8;
         }
         
 
