@@ -31,11 +31,11 @@ namespace MethodsProject
             Console.WriteLine(a);
             Console.ReadLine();
 
-            decimal b = operation.Division(1);
+            decimal b = operation.Math(2);
             Console.WriteLine(b);
             Console.ReadLine();
 
-            string car = operation.Price("3500");
+            string car = operation.Math("3500");
            int carPrice = Convert.ToInt32(car);
             Console.WriteLine(car);
             Console.ReadLine();
