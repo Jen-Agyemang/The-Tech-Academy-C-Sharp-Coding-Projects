@@ -13,7 +13,7 @@ namespace VoidMethod
             //a = 2;
             //b = 5;
             Console.WriteLine("The names of the math operations are: {a} and {b}" );
-            Console.WriteLine("a plus b equals " + (a + b));
+            Console.WriteLine(" a plus the number 8 equals " + (a + 8));
             Console.WriteLine("Number: {b} is " + b);
             Console.ReadLine();
         }
