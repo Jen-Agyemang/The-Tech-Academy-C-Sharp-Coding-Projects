@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClassesAndMethodsProject
 {
-   public  class MathOperation
+    public class MathOperation
     {
         //1.Create a class. In that class, create a method that takes two integers as parameters.Make one of them optional.Have the method do a math operation and return a integer result.
 
@@ -18,9 +18,9 @@ namespace ClassesAndMethodsProject
 
         //5. Try various combinations of numbers on the code, including having no second number.
 
-        public int Addition(int a)
+        public int Addition(int a, int b = 0)
         {
-            return a + 2;
+            return a;
         }
     }
 }

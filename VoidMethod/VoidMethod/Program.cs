@@ -23,7 +23,7 @@ namespace VoidMethod
             //Console.ReadLine();
 
             Math calc = new Math();
-            calc.Operation(2, 5);
+            calc.Operation(a: 2, b: 5);
         }
     }
 }
