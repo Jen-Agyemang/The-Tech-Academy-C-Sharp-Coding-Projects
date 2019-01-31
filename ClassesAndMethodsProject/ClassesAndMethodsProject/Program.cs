@@ -25,10 +25,10 @@ namespace ClassesAndMethodsProject
             int numberSelected1 = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("A second number is required, but please, this is an optional number.");
             int numberSelected2 = Convert.ToInt32(Console.ReadLine());
-            int a = calc.Addition(numberSelected1);
-            int b = calc.Addition(numberSelected2);
+            int a = calc.Addition(4);
+            int b = calc.Addition(3, 3);
             Console.WriteLine((a + numberSelected1));
-            Console.WriteLine((b + numberSelected2));
+            Console.WriteLine((a + b +numberSelected2));
             Console.ReadLine();
         }
     }

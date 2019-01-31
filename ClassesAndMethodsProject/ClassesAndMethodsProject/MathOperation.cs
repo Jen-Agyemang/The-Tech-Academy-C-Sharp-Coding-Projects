@@ -20,7 +20,8 @@ namespace ClassesAndMethodsProject
 
         public int Addition(int a, int b = 0)
         {
-            return a + 5;
+            return a + b;
+            
         }
     }
 }
