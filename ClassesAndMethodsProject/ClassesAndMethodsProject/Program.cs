@@ -23,8 +23,10 @@ namespace ClassesAndMethodsProject
             MathOperation calc = new MathOperation();
             Console.WriteLine("Please, input two numbers, one at a time?");
             int numberSelected1 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("A second number is required, but please, do not select the second number.");
+            Console.WriteLine("A second number is required, but please, this is an optional number.");
+            int numberSelected2 = Convert.ToInt32(Console.ReadLine());
             int a = calc.Addition(8);
+            int b = calc.Addition(numberSelected1);
             Console.WriteLine(a + numberSelected1);
             Console.ReadLine();
         }
