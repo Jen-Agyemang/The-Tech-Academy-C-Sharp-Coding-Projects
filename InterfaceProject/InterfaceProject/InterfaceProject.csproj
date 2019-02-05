@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3B88CE5A-6122-4039-9ADE-03348EB10F30}</ProjectGuid>
+    <ProjectGuid>{40504DF7-1727-4EAB-98C4-B1419BB876B0}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>AbstractProject</RootNamespace>
-    <AssemblyName>AbstractProject</AssemblyName>
+    <RootNamespace>InterfaceProject</RootNamespace>
+    <AssemblyName>InterfaceProject</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,9 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Employee.cs" />
-    <Compile Include="IQuittable.cs" />
-    <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

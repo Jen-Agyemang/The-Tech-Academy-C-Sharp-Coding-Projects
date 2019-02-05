@@ -25,6 +25,11 @@ namespace AbstractProject
             employee.LastName = "Student";
             employee.SayName();
             Console.ReadLine();
+
+            IQuittable quit = new Employee();
+            quit.Quit();
+
+            Console.ReadLine();
         }
     }
 }

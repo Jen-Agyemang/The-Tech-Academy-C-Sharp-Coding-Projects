@@ -6,11 +6,15 @@ using System.Threading.Tasks;
 
 namespace AbstractProject
 {
-    public class Employee : Person
+    public class Employee : Person, IQuittable
     {
         public override void SayName()
         {
             Console.WriteLine(FirstName + " " + LastName);
+        }
+        public void Quit()
+        {
+            Console.WriteLine("My first interface project.");
         }
     }
 }
