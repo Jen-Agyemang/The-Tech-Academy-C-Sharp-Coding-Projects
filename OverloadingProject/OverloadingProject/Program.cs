@@ -20,7 +20,7 @@ namespace OverloadingProject
             employee2.Id = "32891332";
             Console.WriteLine("Does employee1 and employee2 have the same firstnames? " + (employee1.Firstname == employee2.Firstname));
             Console.WriteLine("Does employee1 and employee2 have same lastnames? " + (employee1.Lastname == employee2.Lastname));
-            Console.WriteLine("Does employee1 and employee2 have the same Id? " + (employee1 == employee2));
+            Console.WriteLine( (employee1 == employee2));
             Console.ReadLine();
 
         }
