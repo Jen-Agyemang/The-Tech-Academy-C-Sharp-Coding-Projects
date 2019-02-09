@@ -13,13 +13,14 @@ namespace Enum
             try
             {
                 TheDaysOfTheWeek theDays = new TheDaysOfTheWeek();
-                theDays.TheDay = theDays.TheDay;
                 Console.WriteLine("Please select the current day of the week?");
                 string daySelected = Console.ReadLine();
-                var week = System.Enum.Parse(typeof(Days), daySelected);
-                Console.WriteLine(System.Enum.Parse(typeof(Days), daySelected));
-                //Console.WriteLine("Today is : ", System.Enum.Parse(typeof(Days), daySelected));
-                Console.WriteLine("Today is {0}. ", System.Enum.Parse(typeof(Days), daySelected));
+                var TheDay = System.Enum.Parse(typeof(TheDaysOfTheWeek), daySelected);
+                TheDaysOfTheWeek parsedEnumValue = (TheDaysOfTheWeek)System.Enum.Parse(typeof(TheDaysOfTheWeek), daySelected);
+                //Console.WriteLine(System.Enum.Parse(typeof(Days), daySelected));
+               // Console.WriteLine("Today is : ", (TheDaysOfTheWeek)System.Enum.Parse(typeof(TheDaysOfTheWeek), daySelected));
+                Console.WriteLine("Today is {0}. ", (TheDaysOfTheWeek)System.Enum.Parse(typeof(TheDaysOfTheWeek), daySelected));
+                
               //  Console.WriteLine(System.Enum.GetName(typeof(Days), theDays));
 
             }
@@ -36,7 +37,7 @@ namespace Enum
             {
                 Console.ReadLine();
             }
-           // DateTime d = DateTime.Now;
+           
         }
     }
 }
