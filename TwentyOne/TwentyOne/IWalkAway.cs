@@ -4,10 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace InterfaceProject
+namespace TwentyOne
 {
-    interface IQuittable
+    interface IWalkAway
     {
-        void Quit();
+        void WalkAway(Player player);
+
+
     }
 }

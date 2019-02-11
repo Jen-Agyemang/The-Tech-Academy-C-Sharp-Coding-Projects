@@ -28,6 +28,7 @@ namespace OverloadingProject
             {
                 Console.WriteLine(items1);
             }
+
             foreach (int items2 in things2.Things)
             {
                 Console.WriteLine(items2);

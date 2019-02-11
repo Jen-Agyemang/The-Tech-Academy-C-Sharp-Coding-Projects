@@ -10,24 +10,27 @@ namespace TheLambdaProject
     {
         static void Main(string[] args)
         {
-            List<string> employees = new List<string>(); //{ "Jen Doe", "Martin Key", "Addy Molly", "Rich richy", "Max maxy", "Charley charles", "Mercy Pomaah", "Bigail Bigail", "Joe Mo", "Joe Tag" };
-            employees.Add("Jen Doe");
-            employees.Add("Martin Key");
-            employees.Add("Addy Molly");
-            employees.Add("Rich Richy");
-            employees.Add("Max maxy");
-            employees.Add("Charley charles");
-            employees.Add("Mercy Pomaah");
-            employees.Add("Bigail Bigai");
-            employees.Add("Joe Mo");
-            employees.Add("Joe Tag");
+            List<string> Employees = new List<string>(); // { "Jen Doe", "Martin Key", "Addy Molly", "Rich richy", "Max maxy", "Charley charles", "Mercy Pomaah", "Bigail Bigail", "Joe Mo", "Joe Tag" };
+            Employees.Add("Jen Doe");
+            Employees.Add("Martin Key");
+            Employees.Add("Addy Molly");
+            Employees.Add("Rich Richy");
+            Employees.Add("Max maxy");
+            Employees.Add("Charley charles");
+            Employees.Add("Mercy Pomaah");
+            Employees.Add("Bigail Bigai");
+            Employees.Add("Joe Mo");
+            Employees.Add("Joe Tag");
 
-
-            foreach (string employee in employees)
+            foreach (string employees in Employees)
             {
-               Console.WriteLine(employee);
+                Console.WriteLine(employees);
+                Console.WriteLine(employees.Contains("Joe"));
                 Console.ReadLine();
+
             }
+           
         }
+
     }
 }

@@ -19,7 +19,7 @@ namespace TheEnumProject
                 Console.WriteLine("Today is {0}. ", (Days)Enum.Parse(typeof(Days), daySelected));
                 Console.ReadLine();
             }
-            catch (FormatException e)
+            catch (SystemException e)
             {
                 Console.WriteLine(" Please enter an actual day of the week. Thank you.");
                 Console.ReadLine();
