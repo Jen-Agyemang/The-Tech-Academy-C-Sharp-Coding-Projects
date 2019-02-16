@@ -8,22 +8,24 @@ namespace TheConstProject
 {
     public class Identity
     {
-        public int Id;
-        public string Name;
+        public string name;
+        public int id;
+
+        public Identity(string studentName, int Id)
+        {
+
+        }
+        public Identity(string name) : this(name, 9454)
+        {
+
+            this.name = name;
+
+        }
 
         public Identity()
         {
-
-        }
-
-        public Identity(int id)
-        {
-            this.Id = id;
-        }
-        public Identity(int id, string name)
-        {
-            this.Id = id;
-            this.Name = name;
         }
     }
+
 }
+

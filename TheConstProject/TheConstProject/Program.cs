@@ -15,12 +15,12 @@ namespace TheConstProject
             //3.Chain two constructors together.
 
             const string myIdentity = "Jen Agyemang";
+            Console.WriteLine("Hello, {0}.", myIdentity);
             var identity = new Identity();
-            identity.Id = 39291;
-            identity.Name = "Nana";
-            Console.WriteLine("Hello {0}.", myIdentity);
-            Console.WriteLine(identity.Id);
-            Console.WriteLine(identity.Name);
+            identity.id = 98898;
+            identity.name = "Jennifer";
+            Console.WriteLine(identity.id);
+            Console.WriteLine(identity.name);
             Console.ReadLine();
         }
     }

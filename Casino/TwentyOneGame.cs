@@ -26,7 +26,15 @@ namespace Casino.TwentyOne
 
             foreach (Player player in Players)
             {
-                int bet = Convert.ToInt32(Console.ReadLine());
+                bool validAnswer = false;
+                int bet = 0;
+                while (!validAnswer)
+                {
+                    Console.WriteLine("And how much money did you bring today?");
+                    validAnswer = int.TryParse(Console.ReadLine(), out bet);
+                    if (!validAnswer) Console.WriteLine("Please, enter digits only, no decimals. For example(23.432) is not allowed. Thank you.");
+                }
+                
                 bool sucessfullyBet = player.Bet(bet);
                 if (!sucessfullyBet)
                 {
