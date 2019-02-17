@@ -32,7 +32,9 @@ namespace TwentyOne
             {
                 Player player = new Player(playerName, bank);
                 player.Id = Guid.NewGuid();
-                using (StreamWriter file = new StreamWriter(@"C:Users\\Owner\\Documents\\FilePath", true))
+                using (StreamWriter file = new StreamWriter(@"C:\Users\Owner\Desktop\FilePath.txt", true))
+                    
+
                 {
                     file.WriteLine(player.Id);
                 }
@@ -41,7 +43,22 @@ namespace TwentyOne
                 player.IsActivelyPlaying = true;
                 while (player.IsActivelyPlaying && player.Balance > 0)
                 {
-                    game.Play();
+                    try
+                    {
+                        game.Play();
+                    }
+                    catch (FraudException)
+                    {
+                        Console.WriteLine("Security! Kick this person out.");
+                        Console.ReadLine();
+                        return;
+                    }
+                    catch (Exception)
+                    {
+                        Console.WriteLine("An error occured, please, contact your system administrator.");
+                        Console.ReadLine();
+                        return;
+                    }
                 }
                 game -= player;
                 Console.WriteLine("Thank you for playing!");

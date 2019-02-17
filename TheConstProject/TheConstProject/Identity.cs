@@ -21,6 +21,10 @@ namespace TheConstProject
             this.name = name;
 
         }
+        public Identity(int id) : this("Nana", id)
+        {
+            this.id = id;
+        }
 
         public Identity()
         {
