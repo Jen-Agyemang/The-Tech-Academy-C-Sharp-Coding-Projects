@@ -81,17 +81,19 @@ namespace CarInsurance.Controllers
 
                 if (insuree.DUI == true)
                 {
-                    insuree.Quote = insuree.Quote * 0.25m;
+                    insuree.Quote = insuree.Quote + 25m;
                 }
 
                 if (insuree.CoverageType == true)
                 {
-                    insuree.Quote = insuree.Quote + 0.5m;
+                    insuree.Quote = insuree.Quote + 50m;
                 }
 
                 db.Insurees.Add(insuree);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+               // return RedirectToAction("Details", new { InsureeId = insuree.Id });
+                return RedirectToAction("Index", insuree);
+               // return RedirectToAction("Details", "<InsureeController.cs>", new { id = insuree.Id });
             }
 
             return View(insuree);
