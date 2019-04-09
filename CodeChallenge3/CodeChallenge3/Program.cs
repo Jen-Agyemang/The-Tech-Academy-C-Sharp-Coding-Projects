@@ -9,7 +9,7 @@ namespace CodeChallenge3
         static void Main(string[] args)
         {
            
-
+            // Code Challenge Practice
             //1. Given An Array Of Integers, Write A Method To Total The Odd Numbers
            
 
