@@ -11,7 +11,7 @@ using System.Data;
 
 namespace TwentyOne
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -32,62 +32,65 @@ namespace TwentyOne
 
                     }
                     Console.Read();
-                    
+
+                }
+            }
+
+                bool validAnswer = false;
+                int bank = 0;
+                while (!validAnswer)
+                {
+                    Console.WriteLine("And how much money did you bring today?");
+                    validAnswer = int.TryParse(Console.ReadLine(), out bank);
+                    if (!validAnswer) Console.WriteLine("Please, enter digits only, no decimals. For example(23.432) is not allowed. Thank you.");
                 }
 
-                    bool validAnswer = false;
-                    int bank = 0;
-                    while (!validAnswer)
+                Console.WriteLine("Hello, {0}. Would you like to join a game of 21 right now?", playerName);
+                string answer = Console.ReadLine().ToLower();
+                if (answer == "yes" || answer == "yeah" || answer == "yup")
+                {
+                    Player player = new Player(playerName, bank);
+                    player.Id = Guid.NewGuid();
+                    using (StreamWriter file = new StreamWriter(@"C:\Users\Owner\Desktop\FilePath.txt", true))
+
+
                     {
-                        Console.WriteLine("And how much money did you bring today?");
-                        validAnswer = int.TryParse(Console.ReadLine(), out bank);
-                        if (!validAnswer) Console.WriteLine("Please, enter digits only, no decimals. For example(23.432) is not allowed. Thank you.");
+                        file.WriteLine(player.Id);
                     }
-
-                    Console.WriteLine("Hello, {0}. Would you like to join a game of 21 right now?", playerName);
-                    string answer = Console.ReadLine().ToLower();
-                    if (answer == "yes" || answer == "yeah" || answer == "yup")
+                    Game game = new TwentyOneGame();
+                    game += player;
+                    player.IsActivelyPlaying = true;
+                    while (player.IsActivelyPlaying && player.Balance > 0)
                     {
-                        Player player = new Player(playerName, bank);
-                        player.Id = Guid.NewGuid();
-                        using (StreamWriter file = new StreamWriter(@"C:\Users\Owner\Desktop\FilePath.txt", true))
-
+                        try
 
                         {
-                            file.WriteLine(player.Id);
+                            game.Play();
                         }
-                        Game game = new TwentyOneGame();
-                        game += player;
-                        player.IsActivelyPlaying = true;
-                        while (player.IsActivelyPlaying && player.Balance > 0)
+                        catch (FraudException ex)
                         {
-                            try
-                            {
-                                game.Play();
-                            }
-                            catch (FraudException ex)
-                            {
-                                Console.WriteLine(ex.Message);
-                                UpdateDbWithException(ex);
-                                Console.ReadLine();
-                                return;
-                            }
-                            catch (Exception ex)
-                            {
-                                Console.WriteLine("An error occured, please, contact your system administrator.");
-                                UpdateDbWithException(ex);
-                                Console.ReadLine();
-                                return;
-                            }
+                            Console.WriteLine(ex.Message);
+                            UpdateDbWithException(ex);
+                            Console.ReadLine();
+                            return;
                         }
-                        game -= player;
-                        Console.WriteLine("Thank you for playing!");
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine("An error occured, please, contact your system administrator.");
+                            UpdateDbWithException(ex);
+                            Console.ReadLine();
+                            return;
+                        }
                     }
-                    Console.WriteLine("Feel free to look around the casino. Bye for now.");
-                    Console.Read();
+                    game -= player;
+                    Console.WriteLine("Thank you for playing!");
                 }
+                Console.WriteLine("Feel free to look around the casino. Bye for now.");
+                Console.Read();
+            }
+        
 
-                private static void UpdateDbWithException(Exception ex)
+                public static void UpdateDbWithException(Exception ex)
                 {
                     string connectionString = @"Data Source = (localdb)\ProjectsV13;
                                        Initial Catalog = TwentyOneGame; 
@@ -98,7 +101,7 @@ namespace TwentyOne
                                         ApplicationIntent = ReadWrite; 
                                         MultiSubnetFailover = False";
 
-                    string queryString = @"INSERT INTO EXCEPTIONS (ExceptionType, ExceptionMessage, TimeStamp) VALUES (@ExceptionType, @ExceptionMessage, @TimeStamp";
+                    string queryString = @"INSERT INTO Exceptions (ExceptionType, ExceptionMessage, TimeStamp) VALUES (@ExceptionType, @ExceptionMessage, @TimeStamp";
 
                     using (SqlConnection connection = new SqlConnection(connectionString))
                     {
@@ -106,7 +109,6 @@ namespace TwentyOne
                         command.Parameters.Add("@ExceptionType", SqlDbType.VarChar);
                         command.Parameters.Add("@ExceptionMessage", SqlDbType.VarChar);
                         command.Parameters.Add("@TimeStamp", SqlDbType.DateTime);
-
                         command.Parameters["@ExceptionType"].Value = ex.GetType().ToString();
                         command.Parameters["@ExceptionMessage"].Value = ex.Message;
                         command.Parameters["@TimeStamp"].Value = DateTime.Now;
@@ -115,8 +117,9 @@ namespace TwentyOne
                         command.ExecuteNonQuery();
                         connection.Close();
                     }
-                }
-             private static List<ExceptionEntity> ReadExceptions()
+                     
+        }
+             private static  List<ExceptionEntity> ReadExceptions()
             {
                 string connectionString = @"Data Source = (localdb)\ProjectsV13;
                                        Initial Catalog = TwentyOneGame; 
@@ -156,4 +159,4 @@ namespace TwentyOne
             }
         }
     
-}
+
